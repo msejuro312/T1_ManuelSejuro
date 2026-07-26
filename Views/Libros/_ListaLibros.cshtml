@@ -1,0 +1,24 @@
+﻿@model IEnumerable<T1_ManuelSejuro.Models.Libros>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.idLibro)</th>
+            <th>@Html.DisplayNameFor(model => model.titulo)</th>
+            <th>@Html.DisplayNameFor(model => model.nombre_autor)</th>
+            <th>@Html.DisplayNameFor(model => model.anio_publicacion)</th>
+            <th>@Html.DisplayNameFor(model => model.estado)</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.idLibro)</td>
+            <td>@Html.DisplayFor(modelItem => item.titulo)</td>
+            <td>@Html.DisplayFor(modelItem => item.nombre_autor)</td>
+            <td>@Html.DisplayFor(modelItem => item.anio_publicacion)</td>
+            <td>@Html.DisplayFor(modelItem => item.estado)</td>
+        </tr>
+}
+    </tbody>
+</table>
